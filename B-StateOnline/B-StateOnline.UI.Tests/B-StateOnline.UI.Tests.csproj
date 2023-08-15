@@ -6,12 +6,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{29721A21-8B32-461A-9683-B8B609E42F60}</ProjectGuid>
+    <ProjectGuid>{3E087851-5B62-4183-97CE-DBA69705C444}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UI.Tests</RootNamespace>
-    <AssemblyName>UI.Tests</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <RootNamespace>B_StateOnline.UI.Tests</RootNamespace>
+    <AssemblyName>B-StateOnline.UI.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <NuGetPackageImportStamp>
@@ -99,9 +99,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\UI\UI.csproj">
-      <Project>{526AB399-FC63-4239-B13A-4A352511C33F}</Project>
-      <Name>UI</Name>
+    <ProjectReference Include="..\..\B-StateOnline.UI\B-StateOnline.UI.csproj">
+      <Project>{3183CFFE-BAE7-4593-BB4D-032039439EDC}</Project>
+      <Name>B-StateOnline.UI</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

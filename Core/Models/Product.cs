@@ -5,8 +5,9 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Net;
 
-namespace Core.Models
+namespace B_StateOnline.Core.Models
 {
     public class Product
     {
