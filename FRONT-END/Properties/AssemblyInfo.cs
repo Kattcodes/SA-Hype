@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("B_StateOnline.UI")]
+[assembly: AssemblyTitle("FRONT_END")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("B_StateOnline.UI")]
+[assembly: AssemblyProduct("FRONT_END")]
 [assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("3ecadecb-8944-4470-b591-6ef78cf258db")]
+[assembly: Guid("76a604b9-7c93-4e52-865a-4f1451185ecf")]
 
 // Version information for an assembly consists of the following four values:
 //
