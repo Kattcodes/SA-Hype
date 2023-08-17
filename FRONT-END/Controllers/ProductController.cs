@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Web;
 using System.Web.Mvc;
 
@@ -42,6 +43,67 @@ namespace FRONT_END.Controllers
                 context.Commit();
                 return RedirectToAction("Index");
             }
-        }    
+        }   
+        
+        public ActionResult Edit(string Id)
+        {
+            Product product = context.Find(Id);
+            if(product == null) { 
+                return HttpNotFound();
+            }
+            else
+            {
+                return View(product);
+            }
+        }
+        [HttpPost]
+        public ActionResult Edit(Product product) { 
+            Product p = context.Find(product.Id);
+            if (p == null)
+            {
+                return HttpNotFound();
+            }
+            else
+            {
+                if (!ModelState.IsValid)
+                {
+                    return View(product);
+                }
+                p.Category = product.Category;
+                p.Description = product.Description;
+                p.Image = product.Image;
+                p.Name = product.Name;
+                p.Price = product.Price;
+                context.Commit();
+                return RedirectToAction("Index");
+            }
+        }
+        public ActionResult Delete(string Id)
+        {
+            Product p = context.Find(Id);
+            if(p == null)
+            {
+                return HttpNotFound();
+            }
+            else
+            {
+                return View(p);
+            }
+        }
+        [HttpPost]
+        public ActionResult ConfirmDelete(string Id)
+        {
+
+            Product p = context.Find(Id);
+            if (p == null)
+            {
+                return HttpNotFound();
+            }
+            else
+            {
+                context.Delete(Id);
+                return RedirectToAction("Index");
+            }
+        }
     }
 }
