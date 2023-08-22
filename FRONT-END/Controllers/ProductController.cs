@@ -1,4 +1,5 @@
 ﻿using B_StateOnline.Core.Models;
+using B_StateOnline.Core.ViewModels;
 using B_StateOnline.DataAccess.InMemoryRep;
 using System;
 using System.Collections.Generic;
@@ -14,9 +15,11 @@ namespace FRONT_END.Controllers
     {
 
         ProductRepository context;
+        CategoryRepository categories;
         public ProductController()
         {
             context = new ProductRepository();
+            categories = new CategoryRepository();
         }
         // GET: Product
         public ActionResult Index()
@@ -27,8 +30,11 @@ namespace FRONT_END.Controllers
 
         public ActionResult Create()
         {
-            Product product = new Product();
-            return View(product);
+            //Product product = new Product();
+            ProductVM v = new ProductVM();
+            v.Product = new Product();
+            v.Categories = categories.Collection();
+            return View(v);
         }
         [HttpPost]
         public ActionResult Create(Product product)
@@ -53,7 +59,10 @@ namespace FRONT_END.Controllers
             }
             else
             {
-                return View(product);
+                ProductVM v = new ProductVM();
+                v.Product = product; 
+                v.Categories = categories.Collection();
+                return View(v);
             }
         }
         [HttpPost]

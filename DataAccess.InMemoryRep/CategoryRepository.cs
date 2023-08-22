@@ -11,13 +11,13 @@ namespace B_StateOnline.DataAccess.InMemoryRep
     public class CategoryRepository
     {
         ObjectCache cache = MemoryCache.Default;
-        List<Category> categories;
+        List<ProductCategory> categories;
         public CategoryRepository()
         {
-            categories = cache["categories"] as List<Category>;
+            categories = cache["categories"] as List<ProductCategory>;
             if (categories == null)
             {
-                categories = new List<Category>();
+                categories = new List<ProductCategory>();
             }
         }
 
@@ -26,14 +26,14 @@ namespace B_StateOnline.DataAccess.InMemoryRep
             cache["categories"] = categories;
         }
 
-        public void Insert(Category c)
+        public void Insert(ProductCategory c)
         {
             categories.Add(c);
         }
 
-        public void Update(Category c)
+        public void Update(ProductCategory c)
         {
-            Category category = categories.Find(x => x.Id == c.Id);
+            ProductCategory category = categories.Find(x => x.Id == c.Id);
             if (category != null)
             {
                 category = c;
@@ -43,9 +43,9 @@ namespace B_StateOnline.DataAccess.InMemoryRep
                 throw new Exception("Category not found");
             }
         }
-        public Category Find(string Id)
+        public ProductCategory Find(string Id)
         {
-            Category category = categories.Find(c => c.Id == Id);
+            ProductCategory category = categories.Find(c => c.Id == Id);
             if (category != null)
             {
                 return category;
@@ -56,14 +56,14 @@ namespace B_StateOnline.DataAccess.InMemoryRep
             }
         }
 
-        public IQueryable<Category> Collection()
+        public IQueryable<ProductCategory> Collection()
         {
             return categories.AsQueryable();
         }
 
         public void Delete(string Id)
         {
-            Category c = categories.Find(x => x.Id == Id);
+            ProductCategory c = categories.Find(x => x.Id == Id);
             if (c != null)
             {
                 categories.Remove(c);
