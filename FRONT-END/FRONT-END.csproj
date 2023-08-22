@@ -293,13 +293,13 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Core\B-StateOnline.Core.csproj">
+    <ProjectReference Include="..\Core\SA-Hype.Core.csproj">
       <Project>{5EC38AA3-E605-4C76-9680-56EA7D863957}</Project>
-      <Name>B-StateOnline.Core</Name>
+      <Name>SA-Hype.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DataAccess.InMemoryRep\B-StateOnline.DataAccess.InMemoryRep.csproj">
+    <ProjectReference Include="..\DataAccess.InMemoryRep\SA-Hype.DataAccess.InMemoryRep.csproj">
       <Project>{924D77A2-70B7-4B31-BB56-5AB3BA88B9E5}</Project>
-      <Name>B-StateOnline.DataAccess.InMemoryRep</Name>
+      <Name>SA-Hype.DataAccess.InMemoryRep</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

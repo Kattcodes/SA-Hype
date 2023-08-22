@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Core\B-StateOnline.Core.csproj" />
+    <ProjectReference Include="..\Core\SA-Hype.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>

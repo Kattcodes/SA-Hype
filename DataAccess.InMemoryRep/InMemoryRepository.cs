@@ -4,10 +4,10 @@ using System.Linq;
 using System.Runtime.Caching;
 using System.Text;
 using System.Threading.Tasks;
-using B_StateOnline.Core.Contracts;
-using B_StateOnline.Core.Models;
+using SA_Hype.Core.Contracts;
+using SA_Hype.Core.Models;
 
-namespace B_StateOnline.DataAccess.InMemoryRep
+namespace SA_Hype.DataAccess.InMemoryRep
 {
     public class InMemoryRepository<T> : IRepository<T> where T : BaseEntity
     {

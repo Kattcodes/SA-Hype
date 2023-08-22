@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net;
 
-namespace B_StateOnline.Core.Models
+namespace SA_Hype.Core.Models
 {
     public class Product : BaseEntity
     {

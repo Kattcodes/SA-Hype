@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace B_StateOnline.Core.Models
+namespace SA_Hype.Core.Models
 {
     public class ProductCategory: BaseEntity
     {
