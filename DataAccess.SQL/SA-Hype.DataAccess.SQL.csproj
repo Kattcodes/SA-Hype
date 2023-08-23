@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net4.7.2</TargetFramework>
@@ -6,6 +6,14 @@
     <Nullable>enable</Nullable>
     <LangVersion>Preview</LangVersion>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core\SA-Hype.Core.csproj" />
+  </ItemGroup>
 
   <ItemGroup>
     <Reference Include="System.Net" />
