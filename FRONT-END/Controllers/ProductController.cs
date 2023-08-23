@@ -1,4 +1,5 @@
-﻿using SA_Hype.Core.Models;
+﻿using SA_Hype.Core.Contracts;
+using SA_Hype.Core.Models;
 using SA_Hype.Core.ViewModels;
 using SA_Hype.DataAccess.InMemoryRep;
 using System;
@@ -14,13 +15,14 @@ namespace FRONT_END.Controllers
     public class ProductController : Controller
     {
 
-        ProductRepository context;
-        CategoryRepository categories;
-        public ProductController()
+        IRepository<Product> context;
+        IRepository<ProductCategory> categories;
+        public ProductController(IRepository<ProductCategory> categoryContext, IRepository<Product> productContext)
         {
-            context = new ProductRepository();
-            categories = new CategoryRepository();
+            context = productContext;
+            categories = categoryContext;
         }
+
         // GET: Product
         public ActionResult Index()
         {
